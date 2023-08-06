@@ -28,8 +28,9 @@ def convert_rgb_to_names(rgb_tuple):
     distance, index = kdt_db.query(rgb_tuple)
     return f'{names[index]}'
 
-output = query("C:/Users/verys/Downloads/WhatsApp Image 2023-07-14 at 11.56.18 AM.jpeg")
-ct=ColorThief("C:/Users/verys/Downloads/WhatsApp Image 2023-07-14 at 11.56.18 AM.jpeg")
+output = query(" ") 			
+			#insert file here
+ct=ColorThief(" ")	
 
 color_name=convert_rgb_to_names(ct.get_color())
 
