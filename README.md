@@ -8,7 +8,7 @@ Uses the ViT-GPT2 model from Hugging Face to generate captions for uploaded imag
 ### Color Detection: 
 Extracts the dominant color from the image using ColorThief and converts it to a human-readable color name.
 ### Interactive Caption Generator: 
-Integrates with Gradio to generate Instagram captions based on the image description and dominant color.
+Prompts SAIL-7B model to generate Instagram captions based on the image description and dominant color.
 ## Requirements
 You will need the following Python packages:
 
@@ -33,12 +33,16 @@ Modify the output = query(" ") and ct=ColorThief(" ") lines with the correct pat
 To generate an Instagram caption based on your image, run: python generate_caption.py
 ## Example Output
 ![amazing-landscape-with-mountains-forest-sunset-sky-is-ablaze-with-color-trees-are-silhouetted-against-horizon_36682-200883](https://github.com/user-attachments/assets/04b123a9-bf12-4668-a235-54509e9554c1)
-Generated Caption: A breathtaking view of mountains at sunset.
-Dominant Color: Cornflower Blue Instagram Caption: Generate an Instagram caption for a photo of a breathtaking view of mountains at sunset with the major color being Cornflower Blue.
+#### Generated Caption: 
+A breathtaking view of mountains at sunset.
+#### Dominant Color: 
+Cornflower Blue 
+#### Prompt: 
+Generate an Instagram caption for a photo of a breathtaking view of mountains at sunset with the major color being Cornflower Blue.
 ## How It Works
 ### Image Captioning: 
 The ViT-GPT2 model from Hugging Face analyzes the image and generates captions based on visual features.
 ### Color Extraction: 
 The dominant color is extracted using ColorThief and mapped to a CSS3 color name via the KDTree algorithm.
 ### Caption Generation: 
-A Gradio-based API takes the image caption and color and outputs 4 Instagram-ready captions.
+A Gradio-based API takes the image caption by leveraging the SAIL-7B LLM model and outputs 4 Instagram-ready captions.
